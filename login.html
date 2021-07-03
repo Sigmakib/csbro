@@ -30,7 +30,7 @@
                                 <a href="#" class="active" id="login-form-link">Login</a>
                             </div>
                             <div class="col-xs-6">
-                                <a href="#" id="register-form-link">Register</a>
+                                <a href="register.html" id="register-form-link">Register</a>
                             </div>
                         </div>
                     </div>
@@ -66,59 +66,7 @@
                                     </div>
                                 </div>
                                 <div id="register-form" style="display: none;">
-                                    <form id="contactForm">
-                                        <div class="form-group">
-                                            <input type="text" name="username" id="name" tabindex="1" class="form-control" placeholder="Full Name" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="tel" name="phone" id="phone" tabindex="2" class="form-control" placeholder="Phone Number" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" name="company" id="company" tabindex="2" class="form-control" placeholder="Password" required>
-                                        </div>
-                                        <div>
-                                            <p style="color:#666;text-align: center;">আমাদের এই সফটওয়্যারটির অ্যাক্সেস পেতে হলে অবশ্যই আপনাকে 30 টাকা এন্ট্রি ফি দিয়ে রেজিস্ট্রেশন করতে হবে। নিম্নে আমাদের পেমেন্ট মেথডগুলো দিয়ে দেওয়া হলো। আপনি উক্ত যে কোন মাধ্যমে আপনার টাকা পাঠাতে পারবেন। যে
-                                                নাম্বার থেকে আপনি পেমেন্ট করেছেন তা অবশ্যই দিতে ভুলবেন না। পেমেন্ট কনফার্ম এর পরে আপনাকে মেইলের মাধ্যমে সম্পূর্ণ এক্সেস দিয়ে দেওয়া হবে।</p>
-
-                                            <div class="well" style="text-align: center; background-color: #2b2b31;color: blanchedalmond; border-color: black;">
-                                                <p>
-                                                    <b>Bkash (Personal):</b>
-                                                    <input type="number" id="bkash" tabindex="1" class="form-control" style="margin-top: 10px; background-color: #2b2b31;color: white;font-size: 24px;text-align: center;outline: none; border-color: black;" value="01999302636" readonly>
-                                                    <div class="form-group">
-                                                        <div class="row">
-                                                            <div class="col-sm-6 col-sm-offset-3">
-                                                                <button class="btn btn-success" id="copynumber1" style="outline: none;">Copy Number</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </p>
-                                                <p>
-                                                    <b>Nagad, Surecash, Rocket, Upay (Personal):</b>
-                                                    <input type="number" id="sobnum" tabindex="1" class="form-control" style="margin-top: 10px; background-color: #2b2b31;color: white;font-size: 24px;text-align: center;outline: none; border-color: black;" value="01521569529" readonly>
-                                                    <div class="form-group">
-                                                        <div class="row">
-                                                            <div class="col-sm-6 col-sm-offset-3">
-                                                                <button class="btn btn-success" id="copynumber2" style="outline: none;">Copy Number</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </p>
-                                                <p>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <p style="color:#666;text-align: center;">যে নাম্বার থেকে পেমেন্ট করেছেন সেই নাম্বার অথবা ট্রানজেকশন আইডিটি এখানে দিন।</p>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="message" id="message" tabindex="1" class="form-control" placeholder="Number/Transaction ID/Message" required>
-                                        </div>
-                                        <div class="col-sm-6 col-sm-offset-3 ">
-                                            <button class="form-control btn btn-register" data-toggle="modal" data-target="#myModal" onclick="userResister()" id="idOfButton" style="outline: none; " type="submit">Register</button>
-                                        </div>
-                                    </form>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -180,25 +128,6 @@
                     }
                 });
             });
-    </script>
-
-    <script>
-        $(function() {
-            $('#login-form-link').click(function(e) {
-                $("#login-form ").delay(100).fadeIn(100);
-                $("#register-form ").fadeOut(100);
-                $('#register-form-link').removeClass('active');
-                $(this).addClass('active');
-                e.preventDefault();
-            });
-            $('#register-form-link').click(function(e) {
-                $("#register-form ").delay(100).fadeIn(100);
-                $("#login-form ").fadeOut(100);
-                $('#login-form-link').removeClass('active');
-                $(this).addClass('active');
-                e.preventDefault();
-            });
-        });
     </script>
 </body>
 </html>
