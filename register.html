@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSBRO</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+    <link rel="stylesheet" href="registerstyle.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="brand"><span>CS BRO</span> Registration</h2>
+        <div class="wrapper">
+            <div class="company-info">
+                <h3>Requirement</h3>
+                <p>আমাদের এই সফটওয়্যারটির অ্যাক্সেস পেতে হলে অবশ্যই আপনাকে 20 টাকা এন্ট্রি ফি দিয়ে রেজিস্ট্রেশন করতে হবে। নিম্নে আমাদের পেমেন্ট মেথডগুলো দিয়ে দেওয়া হলো। আপনি উক্ত যে কোন মাধ্যমে আপনার টাকা পাঠাতে পারবেন। যে নাম্বার থেকে আপনি পেমেন্ট করেছেন
+                    তা অবশ্যই দিতে ভুলবেন না (Payment proof)। পেমেন্ট কনফার্ম এর পরে আপনাকে মেইলের মাধ্যমে সম্পূর্ণ এক্সেস দিয়ে দেওয়া হবে।</p>
+                <div>
+                    <p>
+                        <b>Bkash (Personal):</b><br/>
+                        <input type="number" id="bkash" value="01999302636" readonly>
+                        <button id="copynumber1" style="outline: none;">Copy Number</button>
+                    </p>
+                    <p>
+                        <b>Nagad, Surecash, Rocket, Upay (Personal):</b><br/>
+                        <input type="number" id="sobnum" value="01521569529" readonly>
+                        <button id="copynumber2" style="outline: none;">Copy Number</button>
+                    </p>
+                    <p>
+                </div>
+            </div>
+            <div class="contact">
+                <h3>Give Info</h3>
+                <form id="contactForm">
+                    <p>
+                        <label>Name</label>
+                        <input type="text" name="name" id="name" placeholder="Full Name" required>
+                    </p>
+
+                    <p>
+                        <label>Email Address</label>
+                        <input type="email" name="email" id="email" placeholder="Email..." required>
+                    </p>
+                    <p>
+                        <label>Phone Number</label>
+                        <input type="tel" name="phone" id="phone" placeholder="Phone Number..." required>
+                    </p>
+                    <p>
+                        <label>Password</label>
+                        <input type="password" name="company" id="company" placeholder="Password" required>
+                    </p>
+                    <p>
+                        <label>Payment proof (Number/Transaction ID/Message)</label>
+                        <input type="text" name="message" id="message" required>
+                    </p>
+                    <div class="alert">আপনার রেজিস্ট্রেশন রিকোয়েস্ট গ্রহন করা হয়েছে। খুব শীঘ্রই আপনার ইমেইলে রেজিস্ট্রেশন কনফার্মেশন মেইল পাঠানো হবে!</div>
+                    <p class="full">
+                        <button type="submit">Submit</button>
+
+                    </p>
+                </form>
+                <br/>
+                <a href="login.html">Already have an account?</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script src="reg.js"></script>
+</body>
+
+</html>
