@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS BRO Login</title>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="script.js"></script>
+    <script>checkUserLoged();</script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page-body">
+    <!--Start container-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel panel-login">
+                    <header class="panel panel-login herostylecsbro">
+                        <h1 class="text-center">CS BRO</h1>
+                    </header>
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <a href="#" class="active" id="login-form-link">Login</a>
+                            </div>
+                            <div class="col-xs-6">
+                                <a href="#" id="register-form-link">Register</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div id="login-form" style="display: block;">
+
+                                    <div id="login_div">
+                                        <div class="form-group">
+                                            <input type="email" id="email_field" class="form-control inputremake" placeholder="Email">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" id="password_field" class="form-control inputremake" placeholder="Password">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-sm-6 col-sm-offset-3">
+                                                    <button class="form-control btn btn-login" style="outline: none;" onclick="userLogin()">Login to Account</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="text-center">
+                                                    <a href="forgotpassword.html" tabindex="5" class="forgot-password">Forgot
+                                                        Password?</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="register-form" style="display: none;">
+                                    <form id="contactForm">
+                                        <div class="form-group">
+                                            <input type="text" name="username" id="name" tabindex="1" class="form-control" placeholder="Full Name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="tel" name="phone" id="phone" tabindex="2" class="form-control" placeholder="Phone Number" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" name="company" id="company" tabindex="2" class="form-control" placeholder="Password" required>
+                                        </div>
+                                        <div>
+                                            <p style="color:#666;text-align: center;">আমাদের এই সফটওয়্যারটির অ্যাক্সেস পেতে হলে অবশ্যই আপনাকে 30 টাকা এন্ট্রি ফি দিয়ে রেজিস্ট্রেশন করতে হবে। নিম্নে আমাদের পেমেন্ট মেথডগুলো দিয়ে দেওয়া হলো। আপনি উক্ত যে কোন মাধ্যমে আপনার টাকা পাঠাতে পারবেন। যে
+                                                নাম্বার থেকে আপনি পেমেন্ট করেছেন তা অবশ্যই দিতে ভুলবেন না। পেমেন্ট কনফার্ম এর পরে আপনাকে মেইলের মাধ্যমে সম্পূর্ণ এক্সেস দিয়ে দেওয়া হবে।</p>
+
+                                            <div class="well" style="text-align: center; background-color: #2b2b31;color: blanchedalmond; border-color: black;">
+                                                <p>
+                                                    <b>Bkash (Personal):</b>
+                                                    <input type="number" id="bkash" tabindex="1" class="form-control" style="margin-top: 10px; background-color: #2b2b31;color: white;font-size: 24px;text-align: center;outline: none; border-color: black;" value="01999302636" readonly>
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="col-sm-6 col-sm-offset-3">
+                                                                <button class="btn btn-success" id="copynumber1" style="outline: none;">Copy Number</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </p>
+                                                <p>
+                                                    <b>Nagad, Surecash, Rocket, Upay (Personal):</b>
+                                                    <input type="number" id="sobnum" tabindex="1" class="form-control" style="margin-top: 10px; background-color: #2b2b31;color: white;font-size: 24px;text-align: center;outline: none; border-color: black;" value="01521569529" readonly>
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="col-sm-6 col-sm-offset-3">
+                                                                <button class="btn btn-success" id="copynumber2" style="outline: none;">Copy Number</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </p>
+                                                <p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p style="color:#666;text-align: center;">যে নাম্বার থেকে পেমেন্ট করেছেন সেই নাম্বার অথবা ট্রানজেকশন আইডিটি এখানে দিন।</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="message" id="message" tabindex="1" class="form-control" placeholder="Number/Transaction ID/Message" required>
+                                        </div>
+                                        <div class="col-sm-6 col-sm-offset-3 ">
+                                            <button class="form-control btn btn-register" data-toggle="modal" data-target="#myModal" onclick="userResister()" id="idOfButton" style="outline: none; " type="submit">Register</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End container-->
+
+
+    <!-- Trigger the modal with a button -->
+<!-- <button type="button" class="btn btn-info btn-lg" >Open Modal</button> -->
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title" style="color: #777;">রেজিস্ট্রেশন রিকোয়েস্ট</h4>
+      </div>
+      <div class="modal-body" style="color: green;">
+        <p>আপনার রেজিস্ট্রেশন রিকোয়েস্ট গ্রহন করা হয়েছে। খুব শীঘ্রই আপনার ইমেইলে রেজিস্ট্রেশন কনফার্মেশন মেইল পাঠানো হবে|</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+    <script>
+    //Copy payment number
+    var text = document.getElementById("bkash");
+        var text2 = document.getElementById("sobnum");
+        var copybtn = document.getElementById("copynumber1");
+        var copybtn2 = document.getElementById("copynumber2");
+        copybtn.onclick = function() {
+            text.select();
+            document.execCommand("copy");
+            alert("Bikash number copied.");
+        }
+        copybtn2.onclick = function() {
+            text2.select();
+            document.execCommand("copy");
+            alert("Nagad, Surecash, Rocket, Upay number copied.");
+        }
+
+
+        //Disable button for inital stage
+            $(document).ready(function() {
+                $(':input[type="submit"]').prop('disabled', true);
+                $('input[type="text"]').keyup(function() {
+                    if ($(this).val() != '') {
+                        $(':input[type="submit"]').prop('disabled', false);
+                    }
+                });
+            });
+    </script>
+
+    <script>
+        $(function() {
+            $('#login-form-link').click(function(e) {
+                $("#login-form ").delay(100).fadeIn(100);
+                $("#register-form ").fadeOut(100);
+                $('#register-form-link').removeClass('active');
+                $(this).addClass('active');
+                e.preventDefault();
+            });
+            $('#register-form-link').click(function(e) {
+                $("#register-form ").delay(100).fadeIn(100);
+                $("#login-form ").fadeOut(100);
+                $('#login-form-link').removeClass('active');
+                $(this).addClass('active');
+                e.preventDefault();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS BRO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/df358c0385.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>checklogin();</script>
+</head>
+<body>
+    <div class="contain">
+
+        <div class="menubar" id="menubar">
+            <!--Navigation bar-->
+            <ul class="menubar__ul">
+                <div class="menubar__logo">
+                    <h1 class="menubar__logo--text"><span>CS</span>BRO</h1>
+                </div>
+                <li><a class="menubar__ul--link" href="index.html"><i class='fa fa-home' style="padding-right: 5px;"></i> Home</a></li>
+                <li><a class="menubar__ul--link" href="e-book.html"><i class='fa fa-book' style="padding-right: 5px;"></i>E-books</a></li>
+                <li><a class="menubar__ul--link" href="handnote.html"><i class='fa fa-file-text' style="padding-right: 5px;"></i>Hand Note</a></li>
+                <li><a class="menubar__ul--link" href="firstsemister.html"><i class='fa fa-database' style="padding-right: 5px;"></i>CSE 1'st semister</a></li>
+                <li><a class="menubar__ul--link" href="#victory" onclick="victory()"><i class='fa fa-angellist' style="padding-right: 5px;"></i> Our Victory</a></li>
+                <li><a class="menubar__ul--link" href="nuwebsite.html"><i class='fa fa-area-chart' style="padding-right: 5px;"></i>Nu Notice board</a></li>
+                <li><a class="menubar__ul--link active" href="formfillup.html"><i class='fa fa-area-chart' style="padding-right: 5px;"></i>Form fill up</a></li>
+                <li><a class="menubar__ul--link" href="#" onclick="logout()"><i class='fa fa-sign-out' style="padding-right: 5px;"></i>Logout</a></li>
+                <li><a class="menubar__ul--link closemenubar" id="closemenubar" href="#"><i class="fa fa-arrow-left"></i> Close menu bar</a></li>
+            </ul>
+            <!--End Navigation bar-->
+        </div>
+
+        <div class="containarea">
+
+            <div class="contain_row" id="popupArea">
+
+                <div class="topmenubar">
+                    <div class="menuslider" id="menuslider">
+                        <i class="fa fa-bars"></i>
+                    </div>
+
+                    <div class="menulogo">
+                        <h2 class="menulogo--text">CS&nbsp;BRO</h2>
+                    </div>
+        
+                    <div class="menuhelper" onclick="openchatbox()">
+                        <i class="fa fa-comments"></i>
+                    </div>
+        
+                    <div class="menusetting" onclick="opensettingbox()">
+                        <i class="fa fa-cog"></i>
+                    </div>
+
+
+                    <!--popUp Chat box-->
+                    <div class="popupchatbox" id="popupchatbox" windowOpen="off">
+                        <iframe src="https://sigmakib2.github.io/cs-bro-chat/" frameborder="0"></iframe>
+                    </div>
+                    <!--End PopUp chat box-->
+
+
+                    <div class="popupsettingbox" id="popupSettingBox" windowOpen="off">
+                        <div class="popupsettingbox__list">
+                            <a href="contact.html" class="popupsettingbox__list--item">
+                                <i class="fa fa-user"></i>
+                                <span>Contact admin or teacher</span>
+                            </a>
+                            <a href="#" class="popupsettingbox__list--item">
+                                <i class="fa fa-adjust"></i>
+                                <span>Dark mode (upcomeing)</span>
+                            </a>
+                            <a href="#" class="popupsettingbox__list--item" onclick="logout()">
+                                <i class="fa fa-sign-out"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="nuFormFillUp homepageIframe">
+                    <iframe src="http://nubd.info/prof/" frameborder="0"></iframe>
+                </div>
+
+            </div>
+
+
+            <div class="popUpMessage" id="popUpmessage">
+                <div class="popUpMessage__popUpArea">
+                    <span onclick="closePopUp()"><i class="fa fa-close"></i></span>
+                    <h2 id="popUpmessage__heading">This is the heading message</h2>
+                    <p id="popUpmessage__paragraph">This is the popup message</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div style="text-align: center;">
+            <p style="padding: 20px 0">Developers: <a href="https://github.com/anikchandradas " style="color: turquoise; ">Anik Chandra Das</a> and
+                <a href="https://github.com/Sigmakib2 " style="color: turquoise; ">Sakib Mahmud</a>
+            </p>
+        </div>
+    </footer>
+</body>
+    <script>menuSlider();</script>
+</html>
