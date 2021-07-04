@@ -50,7 +50,7 @@ function submitForm(e) {
     // Hide alert after 3 seconds
     setTimeout(function() {
         document.querySelector('.alert').style.display = 'none';
-    }, 30000);
+    }, 50000);
 
     // Clear form
     document.getElementById('contactForm').reset();
